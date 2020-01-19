@@ -22,5 +22,13 @@ To build and run the website in one command (including port mapping):
 
 `docker-compose up`
 
+To hide the outputs from the website:
+
+`docker-compose up -d website`
+
+To run the unit test without saving the container in the end:
+
+`docker-compose run --rm unit-tests`
+
 
 
