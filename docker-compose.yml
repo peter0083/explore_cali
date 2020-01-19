@@ -23,3 +23,4 @@ services:
     command:
       - --pattern
       - /app/spec/unit/*_spec.rb
+# with the course file yml and page_spec.rb, the test runs successfully
