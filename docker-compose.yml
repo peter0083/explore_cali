@@ -1,0 +1,14 @@
+# docker compose version you prefer:
+version: '3.7'
+# services to run
+services:
+    website:
+        build:
+            context: .
+        ports: 
+            - 80:80
+#    instead of looking for image from docker hub, we can find a docker file to build locally        
+
+#    other services available besides running a website: 
+#    database:
+#    application_server:     

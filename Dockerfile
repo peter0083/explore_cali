@@ -7,7 +7,7 @@ MAINTAINER Peter Lin <peter.tingyao@gmail.com>
 # so that whoever has this image will have the Explore_Cal website already built
 COPY website /website
 # copy the nginx config file to the image
-COPY nginx.conf /nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # documentation on how to run this image
 # connect to docker container on port 80
