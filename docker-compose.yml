@@ -3,6 +3,7 @@ services:
   terraform:
     build: 
       context: .
+      dockerfile: terraform.Dockerfile
   selenium:
     image: selenium/standalone-chrome-debug
     ports:

@@ -41,5 +41,8 @@ To run the unit test without saving the container in the end:
 
 1. build Terraform docker image
 
-`docker build -t terraform . -f terraform.Dockerfile
+`docker build -t terraform . -f terraform.Dockerfile`
 
+2. run Terraform docker image without saving it
+
+`docker-compose run --rm terraform`
