@@ -3,21 +3,21 @@ pipeline {
     stages {
         stage('Build our website') {
             steps {
-                sh "$PWD/scripts/build.sh"
+                sh "scripts/build.sh"
             }
 
         }
 
         stage('Run unit tests') {
             steps {
-                sh "$PWD/scripts/test.sh"
+                sh "scripts/test.sh"
             }
 
         }
 
         stage('Deploy website') {
             steps {
-                sh "$PWD/scripts/deploy.sh"
+                sh "scripts/deploy.sh"
             }
         }
     }
