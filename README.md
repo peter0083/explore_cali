@@ -45,4 +45,28 @@ To run the unit test without saving the container in the end:
 
 2. run Terraform docker image without saving it
 
-`docker-compose run --rm terraform`
+`docker-compose run --rm terraform init`
+
+`docker-compose run --rm terraform plan`
+
+`docker-compose run --rm terraform apply`
+
+3. deploy the website into AWS S3
+
+`docker-compose run --rm --entrypoint aws aws s3 cp --recursive website/ s3://explorecalifornia.org`
+
+4. destory the website on AWS S3
+
+`docker-compose run --rm --entrypoint aws aws s3 rm s3://explorecalifornia.org --recursive`
+
+then 
+
+`docker-compose run --rm terraform destroy`
+
+NOTE:
+
+Do not commit `terraform.tfstate` and `terraform.tfstate.backup` to a public git repo. It contains s3 bucket names which people can locate or people can accidentally delete the state and terraform loses the state. See remote state to save state file in another folder.
+
+
+
+
